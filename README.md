@@ -229,8 +229,117 @@
    [Encapsulation]{https://softcodeon.com/wp-content/uploads/2021/02/Encapsulation-in-PHP-1.jpg}
     <p align="center"><a href="https://softcodeon.com/wp-content/uploads/2021/02/Encapsulation-in-PHP-1.jpg" target="_blank"><img src="https://softcodeon.com/wp-content/uploads/2021/02/Encapsulation-in-PHP-1.jpg" width="400" alt="Inheritance"></a></p>
 
+```php
+class Demo {
+  function __construct() {
+     $this->name = 547254; 
+  }
+}
+ $obj = new Demo();
+ echo $obj->name=100
+ // impact 547254 to 500
+``
+```php
+class Demo1 {
+public $number;
+  function __construct() {
+     $this->number=6464;
+  }
+}
+$obj = new Demo1();
+echo $obj->number=500
+// number property value overwright
+```
+```php
+class Demo2 {
+public $number;
+  function __construct() {
+     $this->number=6464;
+  }
+}
+$obj = new Demo2();
+echo $obj->number=500
+// number property value overwright
+```
+```php
+class Demo2 {
+protected $number;
+  function __construct() {
+     $this->number=6464;
+  }
+}
+$obj = new Demo2();
+echo $obj->number=500 // Cannot access protected property Demo::$number
+```
+```php
+class Demo {
+protected $number;
+  function __construct() {
+     $this->number=6464;
+  }
+    function getval(){
+        return $this->number;
+    }
+  
+}
+$obj = new Demo();
+echo $obj->getval() // 6464 | value fatch | not change property  value
+```
+```php
+class Demo {
+protected $number;
+  function __construct() {
+     $this->number=6464;
+  }
+    function getval(){
+        return $this->number;
+    }
+    function setval(){
+         $this->number=500;
+    }
+}
+$obj = new Demo();
+echo $obj->setval() // 6464 | value fatch | not change property  value
+```
+```php
+class Demo {
+protected $number;
+  function __construct() {
+     $this->number=6464;
+  }
+    function getval(){
+        return $this->number;
+    }
+    function setval(){
+         $this->number=500;
+    }
+}
+$obj = new Demo();
+$obj->setval(); // first off all value SET then the set value will GET
+echo $obj->getval(); // value fatch/get 500
+```
 
+ * Private Function Encapsulation 
+    ```php
+    class demo {
+    protected $number;
+    function __construct() {
+        $this->number=6464;
+    }
+        protected function getval(){
+        return $this->number;
+        }
+    }
 
+    class demo2 extends demo{
+        function getval2(){
+        return $this->getval();
+        }
+    }
+
+    $obj = new demo2();
+    echo $obj->getval2();
+    ```
 
 - `Constructor` −
   * `__construct`- (magic method) that is automatically called when an object is instantiated from a class.
