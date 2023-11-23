@@ -163,8 +163,10 @@
 
 - `Overloading` −
 - `Data Abstraction` − সারসংক্ষেপ করা | 
+                     - Abstraction is the any representation of data in which the implementation details are hidden 
+                        (Data Representation refers to the form in which data is stored, processed, and transmitted)
                      - Abstract classes and methods  when the parent class has a named method, 
-                     but need its child class to fill out the tasks.
+                       but need its child class to fill out the tasks.
                      - abstract class is a class that contains at least one abstract method. 
                      - abstract method is a method that is declared, but not implemented in the code.
     ```php
@@ -295,6 +297,29 @@
 
 - `Interfaces` - 
 
+        ```php
+        // Implementing multiple interfaces
+        interface CanRun
+        {
+        public function run();
+        }
+        interface CanSwim
+        {
+        public function swim();
+        }
+        class Tiger implements CanRun, CanSwim
+        {
+        /* Must implement run() and swim() */
+        public function run() {
+            //...
+        }
+        
+        public function swim() {
+            //...
+        }
+        }
+        ```
+
 - `Traits` - PHP only supports single inheritance: a child class can inherit only from one single parent. 
            - if a class needs to inherit multiple behaviors? OOP traits solve this problem.
     [Trait class: multiple behaviors ](https://www.simogrima.com/wp-content/uploads/2013/01/php-traits.jpg)
@@ -399,6 +424,10 @@
     $g->sayName(); //Hello Simone
     $g->sayBaseHello(); //Ciao Simone
     ```
+
+
+
+- `Static Methods`- Static methods called directly - without creating instance of class
 
 - `Namespaces` -PHP Namespaces are the way of encapsulating items so that same names can be reused without name conflicts.
                 - Namespaces allows classes / functions / constants of same name be used in different contexts without any conflict
