@@ -61,3 +61,9 @@ $person1 = new Person();
 ```
 - new Person() creates a new instance of the person class
 - reference to this instance is stored in the variable $person1.
+
+
+## Constructor 
+
+  <p align="center"><a href="Constructor.png" target="_blank"><img src="Constructor.png" width="400" alt="Inheritance"></a></p>
+  <p align="center"><a href="Constructor1.png" target="_blank"><img src="Constructor1.png" width="400" alt="Inheritance"></a></p>
