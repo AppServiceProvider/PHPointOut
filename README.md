@@ -61,3 +61,4 @@ $person1 = new Person();
 ```
 - new Person() creates a new instance of the person class
 - reference to this instance is stored in the variable $person1.
+- An instance is a single copy of the software
