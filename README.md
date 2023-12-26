@@ -1,5 +1,3 @@
-# PHP note: Roman Hossain Shaon
-
 # Abstract: class is a class that has at least one abstract method.
 
 - Abstract classes in PHP can be used to improve security by 
