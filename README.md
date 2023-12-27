@@ -40,3 +40,8 @@
     - Pros: Reusable code, flexibility, loosely coupled
     - Cons: Harder to understand
 
+   * PHP supports single inheritance,
+    - which means a class can inherit properties and methods from only one parent class. 
+    - a child class in PHP can extend only one parent class. its call "single inheritance" or "simple inheritance."
+    
+
