@@ -20,3 +20,6 @@ $clonedObject->name = 'Cloned';
 // Output the names of both objects
 echo 'Original object name: ' . $originalObject->name . "\n"; // Output: Original
 echo 'Cloned object name: ' . $clonedObject->name . "\n";     // Output: Cloned
+
+
+//  object’s  __clone() behavior ??? has to clear 
