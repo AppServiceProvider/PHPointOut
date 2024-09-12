@@ -36,3 +36,23 @@ class greeting {
   }
   $pi = new pi();
   echo $pi->staticValue();
+
+  // ===========================================
+
+  define ('OK', 123);
+  class MyClass{
+    const CITY = 'Dhaka';
+    function sayHi(){
+      // echo 'hi'. $this::CITY; //কনস্ট্যান্ট সবসময় স্ট্যাটিক স্কোপে থাকে
+      echo 'hi'. self::CITY; //কনস্ট্যান্ট সবসময় স্ট্যাটিক স্কোপে থাকে
+
+    }
+  }
+
+$obj= new MyClass();
+// echo $obj::CITY; //Dhaka
+// echo $obj->sayHi(); //Hi Dhaka
+
+echo MyClass::CITY; //Dhaka
+
+// ===============================================
