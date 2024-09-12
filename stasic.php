@@ -56,3 +56,32 @@ $obj= new MyClass();
 echo MyClass::CITY; //Dhaka
 
 // ===============================================
+
+echo PHP_EOL;
+class A{
+  private static $name;
+  static $age;
+  protected static $cell;
+  static function sayHi(){
+    self::$age=22222222222222222; // allow
+    // $this::age=25; //error
+    // $this->age=25; //error
+
+    // $this->name= 'world'; //error
+    self::$name= 'bangladesh';
+    self::$cell=1933233574;
+    echo "hellow first class A". self::$name. self::$cell;
+  }
+}
+
+class B extends A{ 
+  static function sayHi(){
+    parent::$cell;
+    echo "hellow first class B";
+    parent::sayHi();
+  }
+}
+B::sayHi();
+echo B::$age;
+// echo B::$cell; // error
+// echo B::$name; //error
