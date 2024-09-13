@@ -1,6 +1,4 @@
 <?php 
-
-
 class Student{
     private $name;
     private $age;
@@ -23,7 +21,7 @@ class Student{
 
     }   
     function __get($prop){
-       return $this->$prop ;
+        return strtoupper($this->$prop);
    }
 
 }
