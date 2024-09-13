@@ -85,3 +85,21 @@ B::sayHi();
 echo B::$age;
 // echo B::$cell; // error
 // echo B::$name; //error
+
+// =============================
+class A1{
+  static function echoName(){
+       echo self::getName(); // A Class getName early buinding
+       // echo static::getName();// B class getName //late buinding
+   }
+  static function getName(){
+       return 'A Class getName ';
+   }
+}
+
+class B1 extends A1{
+      static function getName(){
+      echo " B class getName";
+   }
+}
+B1::echoName(); 
