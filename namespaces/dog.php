@@ -1,9 +1,17 @@
-<?php 
+<?php
+
 namespace Xyz\Animals;
-class Dog{
-    function getName(){
+require "cat.php";
+class Dog extends Cat
+{
+    function getName()
+    {
         echo "Dog";
     }
 }
 
 // (new Dog)->getName(); // Dog
+
+$obj= new Dog();
+$obj->getSound();
+
