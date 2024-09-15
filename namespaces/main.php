@@ -1,7 +1,7 @@
 <?php
 namespace Xyz\Animals;
-include "cat.php";
-include "dog.php";
+// include "cat.php";
+// include "dog.php";
 
 
 $obj= new Cat(); //    \Xyz\Animals\Cat

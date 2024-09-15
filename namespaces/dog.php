@@ -1,7 +1,7 @@
 <?php
 
 namespace Xyz\Animals;
-require "cat.php";
+// require "cat.php";
 class Dog extends Cat
 {
     function getName()
@@ -12,6 +12,6 @@ class Dog extends Cat
 
 // (new Dog)->getName(); // Dog
 
-$obj= new Dog();
-$obj->getSound();
+// $obj= new Dog();
+// $obj->getSound();
 
