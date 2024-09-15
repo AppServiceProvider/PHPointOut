@@ -2,12 +2,17 @@
 // Include the autoloader
 require 'autoload.php';
 
-// Fully Qualified Names (FQN)
-$dog = new \Animals\Dog();
+// Use the namespace for classes
+use Animals\Dog;
+use Animals\Cat;
+use Vehicles\Car;
+
+
+$dog = new Dog();
 $dog->bark();  // Outputs: Woof!
 
-$Cat = new \Animals\Cat();
+$Cat = new Cat();
 $Cat->honk();
 
-$car = new \Vehicles\Car();
+$car = new Car();
 $car->honk();  // Outputs: Honk!
