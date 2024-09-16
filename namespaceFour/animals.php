@@ -6,6 +6,8 @@ include_once "./Animals/Cat.php";
 include_once "./Sound/Cat.php";
 include_once "./Sound/Dog.php";
 
+// use Animals\Dog;
+
 use Animals\Sounds\Cat;
 
 use Animals\Sounds\Dog as SoundDog;
