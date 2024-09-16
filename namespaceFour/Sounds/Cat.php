@@ -3,7 +3,7 @@
 namespace Animals\Sounds;
 
 class Cat{
-function CatSound(){
+function catSound(){
     echo "CatSound".PHP_EOL;
   }
 

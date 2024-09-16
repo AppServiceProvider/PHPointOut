@@ -4,7 +4,7 @@ namespace Animals\Sounds;
 
 class Dog{
 
-function DogSound(){
+function dogSound(){
     echo "DogSound". PHP_EOL;
  }
 

@@ -1,0 +1,16 @@
+{
+    "name": "nikky/namespace-four",
+    "autoload": {
+        "psr-4": {
+            "Nikky\\NamespaceFour\\":  ["src/Animals", "src/Sound"]
+
+        }
+    },
+    "authors": [
+        {
+            "name": "appserviceprovider",
+            "email": "roman.shaon@gmail.com"
+        }
+    ],
+    "require": {}
+}

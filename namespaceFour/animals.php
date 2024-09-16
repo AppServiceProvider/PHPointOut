@@ -1,23 +1,23 @@
 <?php 
 namespace Animals;
 
-include_once "./Animals/Dog.php";
-include_once "./Animals/Cat.php";
-include_once "./Sound/Cat.php";
-include_once "./Sound/Dog.php";
+include_once "vendor/autoload.php"; // autoload doesnt works
+include_once "Animals/Dog.php";
 
 // use Animals\Dog;
+// use Animals\Cat;
+// use Animals\Sounds\Cat as CatSound;
+// use Animals\Sounds\Dog as SoundDog;
 
-use Animals\Sounds\Cat;
+$dog= new Dog();
+$dog->getName();
 
-use Animals\Sounds\Dog as SoundDog;
+$cat= new Cat();
+$cat->getName();
 
-$obj= new Dog();
-$obj->getName();
-
-$obj1= new Cat();
-$obj1->CatSound();
+// $obj1= new CatSound();
+// $obj1->catSound();
 
 
-$obj2= new SoundDog();
-$obj2->DogSound();
+// $obj2= new SoundDog();
+// $obj2->dogSound();
