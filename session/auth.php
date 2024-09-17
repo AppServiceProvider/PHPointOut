@@ -35,11 +35,6 @@ if (isset($_POST['logout'])) {
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
     <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-    <style>
-        body {
-            margin-top: 30px;
-        }
-    </style>
 </head>
 
 <body>
@@ -77,7 +72,7 @@ if (isset($_POST['logout'])) {
                         <input type="text" name="username" id="username" >
 
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" >
+                        <input type="password" name="password" id="password" required>
 
                         <button type="submit" class="button-primary" name="submit">Log In</button>
                     </form>
