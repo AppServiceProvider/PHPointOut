@@ -22,18 +22,33 @@ $hash= password_hash($pass, PASSWORD_BCRYPT);
 
 $userInput= "secret pas"; // secret pass
 if(password_verify($userInput, $hash)){
-    echo "true";
+    // echo "true";
 }else{
-    echo "false";
+    // echo "false";
 }
 
 // =============================password_verify
 
 
 if (true == password_verify($userInput, $hash)){
-    echo "match";
+    // echo "match";
 }else{
-    echo "did not match";
+    // echo "did not match";
 }
 // =============================Ternary Operator
-echo password_verify($userInput, $hash) ? "match" : "did not match";
+// echo password_verify($userInput, $hash) ? "match" : "did not match";
+
+
+
+// ==================Automatically Checking the Algorithm Using password_get_info()
+$info = password_get_info($hash);
+print_r($info);
+
+// ========Square Bracket Notation: [] This is the modern array syntax in PHP
+$array = [
+    'algo' => '2y',
+    'algoName' => 'bcrypt',
+    'options' => [
+        'cost' => 12
+    ]
+];
