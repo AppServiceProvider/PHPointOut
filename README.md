@@ -13,6 +13,17 @@ general-purpose cryptographic hashing algorithms.
 They are used to hash data, but they do not incorporate important password security features 
 like salting, stretching, or key derivation.
 
+* hash_algorithm
+- MHASH_MD5
+- MHASH_SHA1
+- MHASH_SHA256
+- MHASH_SHA512
+- MHASH_RIPEMD160
+- MHASH_TIGER
+
+
+
+
 
 # Password Hashing Algorithms
 These are specifically designed to hash passwords securely. 
@@ -21,15 +32,6 @@ Are specifically designed for password hashing.
 These algorithms automatically handle salting and stretching, making them much more secure for password storage.
 They include salting and iterative hashing to make brute-force and rainbow table attacks much harder.
 
-
-
-* hash_algorithm
-- MHASH_MD5
-- MHASH_SHA1
-- MHASH_SHA256
-- MHASH_SHA512
-- MHASH_RIPEMD160
-- MHASH_TIGER
 
 
 * Available algorythm Values
