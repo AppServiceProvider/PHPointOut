@@ -15,5 +15,11 @@ $salted_password = $password . $salt;
 // Hash the salted password
 $hashed_password = hash('sha256', $salted_password); // Using SHA-256 for demonstration
 
-echo "Salt: " . $salt . "<br>";
-echo "Salted and Hashed Password: " . $hashed_password;
+// echo $salt . "<br>";
+// echo $hashed_password;
+
+
+
+// ==================================
+
+print_r(password_get_info($salt));
