@@ -19,7 +19,6 @@ $hashed_password = hash('sha256', $salted_password); // Using SHA-256 for demons
 // echo $hashed_password;
 
 
-
 // ==================================
 
 print_r(password_get_info($salt));
