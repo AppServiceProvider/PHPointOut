@@ -1,3 +1,9 @@
+# To run tests in this directory
+```bash
+ ./vendor/bin/phpunit tests/
+ ```
+ 
+
 # Ensure PHPUnit is installed
 
 ```bash
