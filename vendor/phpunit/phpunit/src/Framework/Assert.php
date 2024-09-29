@@ -382,7 +382,7 @@ abstract class Assert
     /**
      * Asserts that two variables are equal.
      *
-     * @throws ExpectationFailedException
+     * @throws ExpectationFailedExceptioncl
      */
     final public static function assertEquals(mixed $expected, mixed $actual, string $message = ''): void
     {
