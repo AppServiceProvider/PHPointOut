@@ -14,3 +14,7 @@ print_r($object);
 
 
 
+// ================= String to Object
+
+$string = "Hello";
+$object = (object) $string;
