@@ -4,6 +4,15 @@
  ```
  
 
+# testOne folder run test 
+```bash
+./vendor/bin/phpunit testOne
+```
+
+
+
+
+
 # Ensure PHPUnit is installed
 
 ```bash
