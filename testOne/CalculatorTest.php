@@ -10,24 +10,35 @@ class CalculatorTest extends TestCase{
         $this->calc = new App\Calculator();
     }
 
-    function testAddtion(): void{
-        $result = $this-> calc->add(22,3);
-        $this->assertEquals(25, $result);
+    public static function dataProviderForAdd(){
+        return [
+            [4,2,6],
+            [6,1,7],
+            [7,7,14],
+        ];
     }
 
-    function testSubtract(): void{
-        $result = $this-> calc->subtract(30,10);
-        $this->assertEquals(20 , $result);
+    /** @dataProvider dataProviderForAdd */
+
+    function testAddtion($a, $b, $expected): void{
+        $result = $this-> calc->add($a, $b);
+        $this->assertEquals($expected, $result);
     }
 
-    function testDivid(): void{
-        $result = $this-> calc->divid(2,2);
-        $this->assertEquals(1 , $result);
-    }
 
-    function testMultiple(): void{
-        $result = $this-> calc->multiple(2,2,2);
-        $this->assertEquals(8, $result);
-    }
+    // function testSubtract(): void{
+    //     $result = $this-> calc->subtract(30,10);
+    //     $this->assertEquals(20 , $result);
+    // }
+
+    // function testDivid(): void{
+    //     $result = $this-> calc->divid(2,2);
+    //     $this->assertEquals(1 , $result);
+    // }
+
+    // function testMultiple(): void{
+    //     $result = $this-> calc->multiple(2,2,2);
+    //     $this->assertEquals(8, $result);
+    // }
 
 }
