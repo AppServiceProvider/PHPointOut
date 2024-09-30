@@ -1,5 +1,5 @@
 <?php 
-
+namespace App;
 
 class Calculator {
     function add( ...$spread){

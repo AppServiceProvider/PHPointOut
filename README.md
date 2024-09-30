@@ -12,6 +12,34 @@
 
 
 
+# composer dump-autoload
+Diagram
+```bash
+src-
+    Calculator.php namespace App;
+
+testOne-
+    App\Calculator();
+
+composer.json-
+         "autoload": {
+        "psr-4":{
+            "App\\":"src"
+        }
+    }      
+
+terminal 
+       composer dump-autoload
+```
+
+after use composer.json psr-4 than run cli
+```bash
+composer dump-autoload
+```
+
+
+
+
 
 # Ensure PHPUnit is installed
 

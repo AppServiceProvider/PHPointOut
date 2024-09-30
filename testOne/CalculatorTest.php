@@ -2,17 +2,17 @@
 
 use PHPUnit\Framework\TestCase;
 
-require("src/Calculator.php");
+
 class CalculatorTest extends TestCase{
 
     private $calc;
     public function setUp():void{
-        $this->calc = new Calculator();
+        $this->calc = new App\Calculator();
     }
 
     function testAddtion(): void{
         $result = $this-> calc->add(22,3);
-        $this->assertEquals(26 , $result);
+        $this->assertEquals(25, $result);
     }
 
     function testSubtract(): void{
