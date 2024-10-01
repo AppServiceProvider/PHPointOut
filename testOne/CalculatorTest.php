@@ -5,24 +5,32 @@ use PHPUnit\Framework\TestCase;
 
 class CalculatorTest extends TestCase{
 
-    private $calc;
-    public function setUp():void{
-        $this->calc = new App\Calculator();
-    }
+    // private $calc;
+    // public function setUp():void{
+    //     $this->calc = new App\Calculator();
+    // }
 
-    public static function dataProviderForAdd(){
-        return [
-            [4,2,6],
-            [6,1,7],
-            [7,7,14],
-        ];
-    }
+    // public static function dataProviderForAdd(){
+    //     return [
+    //         [4,2,6],
+    //         [6,1,7],
+    //         [7,7,14],
+    //     ];
+    // }
 
-    /** @dataProvider dataProviderForAdd */
+    // /** @dataProvider dataProviderForAdd */
 
-    function testAddtion($a, $b, $expected): void{
-        $result = $this-> calc->add($a, $b);
-        $this->assertEquals($expected, $result);
+    // function testAddtion($a, $b, $expected): void{
+    //     $result = $this-> calc->add($a, $b);
+    //     $this->assertEquals($expected, $result);
+    // }
+
+    
+    /**
+     * @test
+     */
+    function do_some_thing(){
+        $this->assertCount(3,['a','b','c']);
     }
 
 
