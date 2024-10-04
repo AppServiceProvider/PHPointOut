@@ -1,9 +1,9 @@
 <?php
-interface baseDisplayName{
+interface baseDisplay{
     function display();
 }
 
-class childDisplay implements baseDisplayName{
+class childDisplay implements baseDisplay{
     private $name;
     
     function __construct($name){
@@ -14,16 +14,8 @@ class childDisplay implements baseDisplayName{
     }
 }
 
-// class display{
-//     function displayFun($name){
-//         $obj= new childClass($name);
-//         $obj->display();
-//     }
-// }
-
-
 class display{
-    function displayFun(childDisplay $childClass){
+    function displayFun(baseDisplay $childClass){
        $childClass->display();
     }
 }
