@@ -3,7 +3,7 @@ interface baseDisplayName{
     function display();
 }
 
-class childClass implements baseDisplayName{
+class childDisplay implements baseDisplayName{
     private $name;
     
     function __construct($name){
@@ -14,12 +14,20 @@ class childClass implements baseDisplayName{
     }
 }
 
+// class display{
+//     function displayFun($name){
+//         $obj= new childClass($name);
+//         $obj->display();
+//     }
+// }
+
+
 class display{
-    function displayFun($name){
-        $obj= new childClass($name);
-        $obj->display();
+    function displayFun(childDisplay $childClass){
+       $childClass->display();
     }
 }
 
+$obj1 = new childDisplay('jon doe');
 $obj= new display();
-$obj->displayFun("AppServiceProvider");
+$obj->displayFun($obj1);
