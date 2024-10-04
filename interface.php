@@ -14,6 +14,20 @@ class childDisplay implements baseDisplay{
     }
 }
 
+class improveChildClass implements baseDisplay{
+    private $name;
+
+    private $title;
+    
+    function __construct($name, $title){
+        $this->name=$name;
+        $this->title= $title;
+    }
+    function display(){
+        echo $this->title .' '. $this->name;
+    }
+}
+
 class display{
     function displayFun(baseDisplay $childClass){
        $childClass->display();
@@ -23,3 +37,10 @@ class display{
 $obj1 = new childDisplay('jon doe');
 $obj= new display();
 $obj->displayFun($obj1);
+
+echo PHP_EOL;
+// ---------------
+
+$obj2 = new improveChildClass('joh doe', 'Mr');
+$ob= new display();
+$ob->displayFun($obj2);
