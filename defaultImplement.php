@@ -1,6 +1,7 @@
 <?php 
 interface CalculatorInterface {
     // Method signature: no default implementation
+    // Implicitly public method
     public function add(int $a, int $b): int;
 
     // Method signature: with default implementation
