@@ -20,3 +20,22 @@ class AdvancedCalculator implements CalculatorInterface {
         return $a * $b * 2; // Custom implementation
     }
 }
+
+// ==============================Default Implementation
+
+abstract class Shape {
+    abstract public function area(): float;
+
+    // Concrete method with a default implementation
+    public function display(){
+    }
+}
+
+// Concrete class that extends the abstract class
+class Rectangle extends Shape {
+    public function area(): float {
+    }
+}
+$rectangle = new Rectangle();
+$rectangle->area(); 
+$rectangle->display();
