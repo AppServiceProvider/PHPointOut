@@ -16,3 +16,27 @@ class Sodium{
     }
 }
 Sodium::addForm()->addColums()->addFields();
+
+
+
+
+
+// method chaining by returning the same instance ($this) from each method
+
+class Fluent {
+    protected $value;
+    public function setValue($value) {
+        $this->value = $value;
+        return $this; // Return current object
+    }
+    public function increment() {
+        $this->value++;
+        return $this; // Return current object
+    }
+    public function getValue() {
+        return $this->value;
+    }
+}
+$fluent = new Fluent();
+echo $fluent->setValue(5)->increment()->getValue(); // Outputs: 6
+
