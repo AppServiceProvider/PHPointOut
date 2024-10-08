@@ -7,6 +7,9 @@ class Demo{
         throw new InvalidArgumentException("No arguments provided");
     }
     foreach ($para as $value) {
+        if (!is_string($value)) {
+            throw new InvalidArgumentException("Only integers are allowed.");
+        }
         $this->propertyVar[]=$value;
         }
         return $this;
@@ -19,7 +22,7 @@ class Demo{
 }
 
 try {
-    (new Demo())->demofun()
+    (new Demo())->demofun(12)
     ->exMethod();
 } catch (InvalidArgumentException $e) {
     echo 'Exception: ' . $e->getMessage() . PHP_EOL;
