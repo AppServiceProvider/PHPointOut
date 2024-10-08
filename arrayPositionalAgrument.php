@@ -19,7 +19,7 @@ class Demo{
 }
 
 try {
-    (new Demo())->demofun(12,12)
+    (new Demo())->demofun()
     ->exMethod();
 } catch (InvalidArgumentException $e) {
     echo 'Exception: ' . $e->getMessage() . PHP_EOL;
