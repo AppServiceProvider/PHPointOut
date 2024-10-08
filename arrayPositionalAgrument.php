@@ -3,7 +3,10 @@
 class Demo{
    private $propertyVar=[];
    function demofun(...$para){
-        foreach ($para as $value) {
+    if(empty($para)){
+        throw new InvalidArgumentException("No arguments provided");
+    }
+    foreach ($para as $value) {
         $this->propertyVar[]=$value;
         }
         return $this;
@@ -15,5 +18,9 @@ class Demo{
    }
 }
 
-(new Demo())->demofun('hellow','world','hi','hlw')
-->exMethod();
+try {
+    (new Demo())->demofun(12,12)
+    ->exMethod();
+} catch (InvalidArgumentException $e) {
+    echo 'Exception: ' . $e->getMessage() . PHP_EOL;
+}
