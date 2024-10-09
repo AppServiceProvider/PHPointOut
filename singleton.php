@@ -3,14 +3,15 @@
 A Singleton in PHP is a design pattern that restricts the instantiation of a class to one "single" instance. 
 This is useful when exactly one object is needed to coordinate actions across the system.
 */
+// 
 class MyClass2 {
     private static $instance = null;
-    private function __construct() {
-        echo "hellow ";
+    private function __construct($name) {
+        echo "hellow ".$name;
     }
-    public static function getInstance() {
+    public static function getInstance($name) {
         if (self::$instance === null) {
-            self::$instance = new MyClass2();
+            self::$instance = new MyClass2($name);
         }
         return self::$instance;
     }
@@ -18,10 +19,26 @@ class MyClass2 {
         echo "Executing some method." .PHP_EOL;
     }
 }
-$instance = MyClass2::getInstance();
-$instance2 = MyClass2::getInstance();
-$instance3 = MyClass2::getInstance();
+$instance = MyClass2::getInstance("World");
+$instance2 = MyClass2::getInstance("Earth");
+$instance3 = MyClass2::getInstance("Sun");
 
 $instance->someMethod(); // hellow Executing some method
 $instance2->someMethod(); // Executing some method
 $instance3->someMethod(); // Executing some metho.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
